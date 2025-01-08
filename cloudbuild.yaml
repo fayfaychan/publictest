@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   script: |
-    echo "hello"
+    echo "hello there"
 options:
   logging: CLOUD_LOGGING_ONLY
