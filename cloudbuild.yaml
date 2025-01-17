@@ -1,9 +1,12 @@
-steps:
-- name: 'ubuntu'
-  args: ['ls', '-l', 'cloud-builders']
-- name: 'ubuntu'
-  args: ['ls', '-l', 'node-amqp']
 
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  script: |
+    echo "FROM ubuntu" > Dockerfile1
+    echo "RUN apt-get update" >> Dockerfile1
+    echo "ENTRYPOINT ['echo', '$BUILD_ID']" >> Dockerfile1
+    docker build -t us-central1-docker.pkg.dev/emilyyfchen-test/wf-test/hello -f Dockerfile1 .
+images: ['us-central1-docker.pkg.dev/emilyyfchen-test/wf-test/hello']
 dependencies:
 - git_source:
     repository:
