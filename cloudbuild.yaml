@@ -8,10 +8,10 @@ steps:
   - name: gcr.io/cloud-builders/docker
     id: Build_Docker_Image
     entrypoint: bash
-    args:
-      - -c
-      - |
-        docker build -t us-central1-docker.pkg.dev/chizhg-louhi-test/gcb-dev/cat-service-gcb-bcid-l2:latest .
+    # args:
+    #   - -c
+    #   - |
+    #     docker build -t us-central1-docker.pkg.dev/chizhg-louhi-test/gcb-dev/cat-service-gcb-bcid-l2:latest .
 dependencies:
   gitSource:
     repository:
