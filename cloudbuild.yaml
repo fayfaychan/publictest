@@ -7,13 +7,13 @@ steps:
     args: ['mvn', 'clean', 'install', '-B', '-X']
   - name: gcr.io/cloud-builders/docker
     id: Build_Docker_Image
-    entrypoint: bash
-    # args:
-    #   - -c
-    #   - |
-    #     docker build -t us-central1-docker.pkg.dev/chizhg-louhi-test/gcb-dev/cat-service-gcb-bcid-l2:latest .
+    # entrypoint: bash
+    # # args:
+    # #   - -c
+    # #   - |
+    # #     docker build -t us-central1-docker.pkg.dev/chizhg-louhi-test/gcb-dev/cat-service-gcb-bcid-l2:latest .
 dependencies:
-  gitSource:
+- gitSource:
     repository:
       url: "https://cloud-release-internal.googlesource.com/cat-service"
     revision: "46e3b02f0d017914a06b90d4881d2a69e2f4c139"
